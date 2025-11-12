@@ -585,11 +585,149 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+<!-- WhatsApp Chat Widget Start -->
+<div id="whatsapp-chat" class="whatsapp-chat">
+  <div class="chat-header">
+    <img src="img/logo.png" alt="Logo" class="chat-logo">
+    <div class="chat-info">
+      <h5>Equity Trust Loan</h5>
+      <span>Support Team</span>
+    </div>
+    <button class="close-chat">&times;</button>
+  </div>
+  <div class="chat-body">
+    <p>Hello 👋<br>How can we assist you today?</p>
+  </div>
+  <a href="https://wa.me/255756614111?text=Hello%20Equity%20Trust%20Loan%20Team!" 
+     target="_blank" 
+     class="chat-button">
+     <i class="fa fa-whatsapp"></i> Chat on WhatsApp
+  </a>
+</div>
 
+<div class="whatsapp-float" id="whatsapp-toggle">
+  <i class="fa fa-whatsapp"></i>
+</div>
+
+<style>
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  background-color: #25D366;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* Chat Box */
+.whatsapp-chat {
+  position: fixed;
+  bottom: 90px;
+  left: 25px;
+  width: 300px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  font-family: 'Arial', sans-serif;
+  z-index: 9999;
+}
+
+/* Chat Header */
+.whatsapp-chat .chat-header {
+  background: #075E54;
+  color: white;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.chat-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.chat-info h5 {
+  margin: 0;
+  font-size: 16px;
+}
+.chat-info span {
+  font-size: 13px;
+  color: #d9fdd3;
+}
+.close-chat {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Chat Body */
+.chat-body {
+  padding: 15px;
+  background: #f5f5f5;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Chat Button */
+.chat-button {
+  background: #25D366;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s;
+}
+.chat-button:hover {
+  background: #1ebe5b;
+}
+</style>
+
+<script>
+  const toggleButton = document.getElementById('whatsapp-toggle');
+  const chatBox = document.getElementById('whatsapp-chat');
+  const closeChat = document.querySelector('.close-chat');
+
+  toggleButton.addEventListener('click', () => {
+    chatBox.style.display = chatBox.style.display === 'flex' ? 'none' : 'flex';
+  });
+
+  closeChat.addEventListener('click', () => {
+    chatBox.style.display = 'none';
+  });
+</script>
+<!-- WhatsApp Chat Widget End -->
 
 </body>
 
 </html>
+
 
 
 
